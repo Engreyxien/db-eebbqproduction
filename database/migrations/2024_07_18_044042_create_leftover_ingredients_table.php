@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('purchaseorder_chickens', function (Blueprint $table) {
+        Schema::create('leftover_ingredients', function (Blueprint $table) {
             $table->id();
-            $table->string('company_name');
-            $table->date('date_requested');
-            $table->date('date_needed');
-            $table->string('number_of_items');
-            $table->string('quantity_unit');
-            $table->string('particulars');
+            $table->string('ingredient_name');
+            $table->string('quantity');
             $table->string('unit_price');
             $table->string('amount');
             $table->unsignedBigInteger('user_id');
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('purchaseorder_chickens');
+        Schema::dropIfExists('leftover_ingredients');
     }
 };

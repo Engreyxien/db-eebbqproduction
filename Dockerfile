@@ -13,11 +13,11 @@ ENV REAL_IP_HEADER 1
 ENV APP_ENV production
 ENV APP_DEBUG false
 ENV DB_CONNECTION pgsql
-ENV DB_HOST dpg-cqb39188fa8c73b02ucg-a.singapore-postgres.render.com
+ENV DB_HOST dpg-cqcsi5pu0jms73e46f80-a.singapore-postgres.render.com
 ENV DB_PORT 5432
-ENV DB_DATABASE elelohebbqhouseproduction
-ENV DB_USERNAME elelohebbqhouseproduction_user
-ENV DB_PASSWORD YzaXFAOMeQaPTorGVENoV8V1uQwjMrwe
+ENV DB_DATABASE db_eleloheproduction
+ENV DB_USERNAME db_eleloheproduction_user
+ENV DB_PASSWORD NzHKkT5bapWPHbVtEOsGzItYBKggQack
 
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1

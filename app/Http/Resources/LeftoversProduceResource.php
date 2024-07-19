@@ -19,7 +19,7 @@ class LeftoversProduceResource extends JsonResource
             "number_of_fried_chicken" => $this->number_of_fried_chicken,
             "number_of_lumpia_produce" => $this->number_of_lumpia_produce,
             "dispatched_to" => $this->dispatched_to,
-            "user_id" => $this->user_id
+            "user" => $this->user
         ];
     }
 }

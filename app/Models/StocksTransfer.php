@@ -24,6 +24,7 @@ class StocksTransfer extends Model
         'description',
         'unit_price',
         'amount',
+        'user_id',
     ];
 
     public function user(): BelongsTo

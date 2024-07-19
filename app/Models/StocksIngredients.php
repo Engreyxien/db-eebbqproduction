@@ -18,6 +18,7 @@ class StocksIngredients extends Model
         'dispatch_AM',
         'dispatch_PM',
         'ending_stocks',
+        'user_id',
     ];
 
     public function user(): BelongsTo

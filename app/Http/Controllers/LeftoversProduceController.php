@@ -23,14 +23,13 @@ class LeftoversProduceController extends Controller
             "number_of_fried_chicken" => "required|string",
             "number_of_lumpia_produce" => "required|string",
             "dispatched_to" => "required",
-            "user_id" => "required|exists:users,id",
         ]);
 
         $leftoversProduce = LeftoversProduce::create([
             "number_of_fried_chicken" => $fields["number_of_fried_chicken"],
             "number_of_lumpia_produce" => $fields["number_of_lumpia_produce"],
             "dispatched_to" => $fields["dispatched_to"],
-            "user_id" => $fields["user_id"],
+            "user_id" => auth()->user()->id
         ]);
         return response()->json([
             "message" => "Leftovers produce has been added",

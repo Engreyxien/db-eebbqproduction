@@ -27,7 +27,6 @@ class LeftoversTurnoverController extends Controller
             "number_of_items" => "required|string",
             "quantity" => "required|string",
             "delivered_by" => "required|string",
-            "user_id" => "required|exists:users,id",
         ]);
 
         $leftoversTurnover = LeftoversTurnover::create([
@@ -38,7 +37,7 @@ class LeftoversTurnoverController extends Controller
             "number_of_items" => $fields["number_of_items"],
             "quantity" => $fields["quantity"],
             "delivered_by" => $fields["delivered_by"],
-            "user_id" => $fields["user_id"],
+            "user_id" => auth()->user()->id
         ]);
     
         return response()->json([

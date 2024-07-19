@@ -28,7 +28,6 @@ class PurchaseorderIngredientsController extends Controller
             "particulars" => "required|string",
             "unit_price" => "required|string",
             "amount" => "required|string",
-            "user_id" => "required|exists:users,id",
         ]);
 
         $purchaseorderIngredient = PurchaseorderIngredients::create([
@@ -40,7 +39,7 @@ class PurchaseorderIngredientsController extends Controller
             "particulars" => $fields["particulars"],
             "unit_price" => $fields["unit_price"],
             "amount" => $fields["amount"],
-            "user_id" => $fields["user_id"],
+            "user_id" => auth()->user()->id
         ]);
         return response()->json([
             "message" => "Purchase Order for ingredients has been added",

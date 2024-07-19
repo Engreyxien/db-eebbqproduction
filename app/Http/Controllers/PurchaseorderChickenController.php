@@ -28,7 +28,6 @@ function setPurchaseorderChicken(Request $request) {
         "particulars" => "required|string",
         "unit_price" => "required|string",
         "amount" => "required|string",
-        "user_id" => "required|exists:users,id",
     ]);
 
     $purchaseorderChicken = PurchaseorderChicken::create([
@@ -40,7 +39,7 @@ function setPurchaseorderChicken(Request $request) {
         "particulars" => $fields["particulars"],
         "unit_price" => $fields["unit_price"],
         "amount" => $fields["amount"],
-        "user_id" => $fields["user_id"],
+        "user_id" => auth()->user()->id
     ]);
     return response()->json([
         "message" => "Purchase Order for chicken has been added",

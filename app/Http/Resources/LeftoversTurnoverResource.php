@@ -23,7 +23,7 @@ class LeftoversTurnoverResource extends JsonResource
             "number_of_items" => $this->number_of_items,
             "quantity" => $this->quantity,
             "delivered_by" => $this->delivered_by,
-            "user_id" => $this->user_id
+            "user" => $this->user
         ];
     }
 }

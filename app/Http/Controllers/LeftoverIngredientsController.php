@@ -25,7 +25,6 @@ class LeftoverIngredientsController extends Controller
             "quantity" => "required|string",
             "unit_price" => "required|string",
             "amount" => "required|string",
-            "user_id" => "required|exists:users,id",
         ]);
 
         $leftoverIngredients = LeftoverIngredients::create([
@@ -33,7 +32,8 @@ class LeftoverIngredientsController extends Controller
             "quantity" => $fields["quantity"],
             "unit_price" => $fields["unit_price"],
             "amount" => $fields["amount"],
-            "user_id" => $fields["user_id"],
+            "user_id" => auth()->user()->id
+            
         ]);
         return response()->json([
             "message" => "Leftover ingredient has been added",

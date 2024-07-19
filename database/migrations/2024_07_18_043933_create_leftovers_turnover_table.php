@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('branch');
             $table->date('date');
-            $table->timeStamp('time');
+            $table->time('time');
             $table->string('item_number');
             $table->string('number_of_items');
             $table->string('quantity');

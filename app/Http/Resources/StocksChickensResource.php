@@ -22,7 +22,7 @@ class StocksChickensResource extends JsonResource
             "dispatch_AM" => $this->dispatch_AM,
             "dispatch_PM" => $this->dispatch_PM,
             "ending_stocks" => $this->ending_stocks,
-            "user_id" => $this->user_id
+            "user" => $this->user
         ];
     }
 }

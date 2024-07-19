@@ -20,7 +20,7 @@ class LeftoverIngredientsResource extends JsonResource
             "quantity" => $this->quantity,
             "unit_price" => $this->unit_price,
             "amount" => $this->amount,
-            "user_id" => $this->user_id
+            "user" => $this->user
         ];
     }
 }

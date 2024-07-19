@@ -18,7 +18,7 @@ class MaterialsResource extends JsonResource
             "id" => $this->id,
             "materials_name" => $this->materials_name,
             "number_of_items" => $this->number_of_items,
-            "user_id" => $this->user_id
+            "user" => $this->user
         ];
     }
 }

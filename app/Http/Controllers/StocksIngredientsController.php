@@ -25,7 +25,6 @@ class StocksIngredientsController extends Controller
             'dispatch_AM' => 'required|string',
             'dispatch_PM' => 'required|string',
             'ending_stocks' => 'required|string',
-            'user_id' => 'required|exists:users,id',
         ]);
 
         $stocksIngredient = StocksIngredients::create([
@@ -34,7 +33,7 @@ class StocksIngredientsController extends Controller
             'dispatch_AM' => $fields['dispatch_AM'],
             'dispatch_PM' => $fields['dispatch_PM'],
             'ending_stocks' => $fields['ending_stocks'],
-            'user_id' => $fields['user_id'],
+            "user_id" => auth()->user()->id
         ]);
 
         return response()->json([

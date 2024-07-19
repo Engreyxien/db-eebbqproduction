@@ -31,7 +31,6 @@ class StocksTransferController extends Controller
             "description" => "required|string",
             "unit_price" => "required|string",
             "amount" => "required|string",
-            "user_id" => "required|exists:users,id",
         ]);
 
         $stocksTransfer = StocksTransfer::create([
@@ -46,7 +45,7 @@ class StocksTransferController extends Controller
             "description" => $fields["description"],
             "unit_price" => $fields["unit_price"],
             "amount" => $fields["amount"],
-            "user_id" => $fields["user_id"],
+            "user_id" => auth()->user()->id
         ]);
         return response()->json([
             "message" => "Stocks transfer has been added",

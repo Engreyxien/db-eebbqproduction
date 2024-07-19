@@ -21,6 +21,7 @@ class PurchaseorderIngredients extends Model
         'particulars',
         'unit_price',
         'amount',
+        'user_id',
     ];
 
     public function user(): BelongsTo

@@ -23,13 +23,12 @@ class MaterialsController extends Controller
         $fields = $request->validate([
             "materials_name" => "required",
             "number_of_items" => "required|string",
-            "user_id" => "required|exists:users,id",
         ]);
 
         $materials = Materials::create([
             "materials_name" => $fields["materials_name"],
             "number_of_items" => $fields["number_of_items"],
-            "user_id" => $fields["user_id"],
+            "user_id" => auth()->user()->id
         ]);
         return response()->json([
             "message" => "Materials has been added",

@@ -25,7 +25,7 @@ class PurchaseorderChickenResource extends JsonResource
             "particulars" => $this->particulars,
             "unit_price" => $this->unit_price,
             "amount" => $this->amount,
-            "user_id" => $this->user_id
+            "user" => $this->user
         ];
     }
 }

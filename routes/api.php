@@ -59,7 +59,7 @@ Route::group (['middleware' => ['auth:sanctum']], function () {
     //Leftover Ingredients
     Route::get ('/leftoveringredients', [LeftoverIngredientsController::class, 'getLeftoverIngredients']);
     Route::get ('/leftoveringredient/{leftoveringredients_id}', [LeftoverIngredientsController::class, 'getLeftoverIngredient']);
-    Route::post('/leftoveringredient', [LeftoverIngredientsController::class, 'setLeftoverIngredients']);
+    Route::post('/leftoveringredient', [LeftoverIngredientsController::class, 'setLeftoverIngredient']);
 
     //Materials
     Route::get ('/materials', [MaterialsController::class, 'getMaterials']);

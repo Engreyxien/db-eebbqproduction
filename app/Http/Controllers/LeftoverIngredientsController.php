@@ -19,7 +19,7 @@ class LeftoverIngredientsController extends Controller
         return response()->json($leftoverIngredients, 200, [], JSON_PRETTY_PRINT);
     }
 
-    function setLeftoverIngredients(Request $request) {
+    function setLeftoverIngredient(Request $request) {
         $fields = $request->validate([
             "ingredient_name" => "required|string",
             "quantity" => "required|string",
@@ -27,7 +27,7 @@ class LeftoverIngredientsController extends Controller
             "amount" => "required|string",
         ]);
 
-        $leftoverIngredients = LeftoverIngredients::create([
+        $leftoverIngredient = LeftoverIngredients::create([
             "ingredient_name" => $fields["ingredient_name"],
             "quantity" => $fields["quantity"],
             "unit_price" => $fields["unit_price"],
@@ -37,7 +37,7 @@ class LeftoverIngredientsController extends Controller
         ]);
         return response()->json([
             "message" => "Leftover ingredient has been added",
-            "data" => $leftoverIngredients
+            "data" => $leftoverIngredient
         ], 201, [], JSON_PRETTY_PRINT);
     }
 }

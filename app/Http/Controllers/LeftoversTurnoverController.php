@@ -22,7 +22,7 @@ class LeftoversTurnoverController extends Controller
         $fields = $request->validate([
             "branch" => "required",
             "date_received" => "required|date",
-            "time_recieved" => "required|string",
+            "time_received" => "required|string",
             "item_number" => "required|string",
             "number_of_items" => "required|string",
             "quantity" => "required|string",

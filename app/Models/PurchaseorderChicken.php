@@ -12,7 +12,6 @@ class PurchaseorderChicken extends Model
     use HasFactory;
 
     protected $fillable = [
-        'purchaseorder_chickens_id',
         'company_name',
         'date_requested',
         'date_needed',

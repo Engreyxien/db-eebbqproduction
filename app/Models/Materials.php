@@ -12,7 +12,6 @@ class Materials extends Model
     use HasFactory;
 
     protected $fillable = [
-        'materials_id',
         'materials_name',
         'number_of_items',
         'user_id',

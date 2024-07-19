@@ -32,7 +32,7 @@ class MaterialsController extends Controller
         ]);
         return response()->json([
             "message" => "Materials has been added",
-            "materials" => $materials
+            "data" => $materials
         ], 201, [], JSON_PRETTY_PRINT);
     }
 }

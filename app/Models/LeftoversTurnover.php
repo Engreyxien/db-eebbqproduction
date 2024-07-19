@@ -12,10 +12,9 @@ class LeftoversTurnover extends Model
     use HasFactory;
 
     protected $fillable = [
-        'leftovers_turnovers_id',
         'branch',
-        'date',
-        'time',
+        'date_received',
+        'time_received',
         'item_number',
         'number_of_items',
         'quantity',

@@ -12,7 +12,6 @@ class StocksIngredients extends Model
     use HasFactory;
 
     protected $fillable = [
-        'stocks_ingredients_id',
         'ingredients_name',
         'beginning_stocks',
         'dispatch_AM',

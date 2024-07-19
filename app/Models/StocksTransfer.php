@@ -12,7 +12,6 @@ class StocksTransfer extends Model
     use HasFactory;
 
     protected $fillable = [
-        'stocks_transfers_id',
         'reference_number',
         'transfer_from',
         'transfer_to',

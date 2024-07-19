@@ -21,8 +21,8 @@ class LeftoversTurnoverController extends Controller
     function setLeftoversTurnover(Request $request) {
         $fields = $request->validate([
             "branch" => "required",
-            "date" => "required|date",
-            "time" => "required|time",
+            "date_received" => "required|date",
+            "time_recieved" => "required|time",
             "item_number" => "required|string",
             "number_of_items" => "required|string",
             "quantity" => "required|string",
@@ -31,8 +31,8 @@ class LeftoversTurnoverController extends Controller
 
         $leftoversTurnover = LeftoversTurnover::create([
             "branch" => $fields["branch"],
-            "date" => $fields["date"],
-            "time" => $fields["time"],
+            "date_received" => $fields["date_received"],
+            "time_received" => $fields["time_received"],
             "item_number" => $fields["item_number"],
             "number_of_items" => $fields["number_of_items"],
             "quantity" => $fields["quantity"],
@@ -42,7 +42,7 @@ class LeftoversTurnoverController extends Controller
     
         return response()->json([
             "message" => "Leftover has been added",
-            "leftovers_turnover" => $leftoversTurnover
+            "data" => $leftoversTurnover
         ], 201, [], JSON_PRETTY_PRINT);
     }
 

@@ -12,7 +12,6 @@ class PurchaseorderIngredients extends Model
     use HasFactory;
 
     protected $fillable = [
-        'purchaseorder_ingredients_id',
         'company_name',
         'date_requested',
         'date_needed',

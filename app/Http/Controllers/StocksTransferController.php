@@ -49,7 +49,7 @@ class StocksTransferController extends Controller
         ]);
         return response()->json([
             "message" => "Stocks transfer has been added",
-            "stocks_transfer" => $stocksTransfer
+            "data" => $stocksTransfer
         ], 201, [], JSON_PRETTY_PRINT);
     }
 }

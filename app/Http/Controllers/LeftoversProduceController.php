@@ -33,7 +33,7 @@ class LeftoversProduceController extends Controller
         ]);
         return response()->json([
             "message" => "Leftovers produce has been added",
-            "leftovers_produce" => $leftoversProduce
+            "data" => $leftoversProduce
         ], 201, [], JSON_PRETTY_PRINT);
     }
 

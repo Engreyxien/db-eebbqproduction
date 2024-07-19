@@ -45,7 +45,7 @@ class StocksChickensController extends Controller
 
         return response()->json([
             'message' => 'Stocks Chicken Created',
-            'stocksChicken' => $stocksChicken
+            'data' => $stocksChicken
         ], 201);
     }
 }

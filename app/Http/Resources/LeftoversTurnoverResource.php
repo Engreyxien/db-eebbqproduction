@@ -17,8 +17,8 @@ class LeftoversTurnoverResource extends JsonResource
         return [
             "id" => $this->id,
             "branch" => $this->branch,
-            "date" => $this->date,
-            "time" => $this->time,
+            "date_received" => $this->date_received,
+            "time_received" => $this->time_received,
             "item_number" => $this->item_number,
             "number_of_items" => $this->number_of_items,
             "quantity" => $this->quantity,

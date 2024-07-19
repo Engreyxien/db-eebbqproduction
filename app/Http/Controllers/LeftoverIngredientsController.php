@@ -37,7 +37,7 @@ class LeftoverIngredientsController extends Controller
         ]);
         return response()->json([
             "message" => "Leftover ingredient has been added",
-            "leftover_ingredient" => $leftoverIngredients
+            "data" => $leftoverIngredients
         ], 201, [], JSON_PRETTY_PRINT);
     }
 }

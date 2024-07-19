@@ -43,7 +43,7 @@ function setPurchaseorderChicken(Request $request) {
     ]);
     return response()->json([
         "message" => "Purchase Order for chicken has been added",
-        "purchaseorder_chicken" => $purchaseorderChicken
+        "data" => $purchaseorderChicken
     ], 201, [], JSON_PRETTY_PRINT);
 
 }

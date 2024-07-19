@@ -43,7 +43,7 @@ class PurchaseorderIngredientsController extends Controller
         ]);
         return response()->json([
             "message" => "Purchase Order for ingredients has been added",
-            "purchaseorder_ingredients" => $purchaseorderIngredient
+            "data" => $purchaseorderIngredient
         ], 201, [], JSON_PRETTY_PRINT);
     }
 }

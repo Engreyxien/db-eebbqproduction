@@ -38,7 +38,7 @@ class StocksIngredientsController extends Controller
 
         return response()->json([
             'message' => 'Stocks Ingredient Created',
-            'stocksIngredient' => $stocksIngredient
+            'data' => $stocksIngredient
         ], 201);
     }
 

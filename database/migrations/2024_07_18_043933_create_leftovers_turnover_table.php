@@ -15,8 +15,8 @@ return new class extends Migration
         Schema::create('leftovers_turnovers', function (Blueprint $table) {
             $table->id();
             $table->string('branch');
-            $table->date('date');
-            $table->time('time');
+            $table->date('date_received');
+            $table->time('time_received');
             $table->string('item_number');
             $table->string('number_of_items');
             $table->string('quantity');
